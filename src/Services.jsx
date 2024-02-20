@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { useGlobalContext } from "./context";
 import { NavLink } from "react-router-dom";
 import { Button } from "./styles/Button";
+import { posts } from "./DummyData";
 
 const Services = () => {
   const { services } = useGlobalContext();
@@ -12,7 +13,7 @@ const Services = () => {
     <Wrapper className="section">
       <h2 className="common-heading">Our Services</h2>
       <div className="container grid grid-three-column">
-        {services.map((curElem) => {
+        {posts.map((curElem) => {
           const { id, name, image, description } = curElem;
           return (
             <div key={id} className="card">
